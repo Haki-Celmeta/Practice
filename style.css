@@ -48,13 +48,10 @@
 }
 
 body {
-  padding: 50px 0px;
-}
-
-header {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 50px 0px;
 }
 
 .three-image-container {
@@ -180,4 +177,37 @@ header {
   width: 260px;
   border-radius: 50px;
   border: 6px solid #afdaf6;
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  margin-top: 15px;
+}
+
+.services-container .service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  max-width: 115px;
+  gap: 10px;
+}
+
+.services-container .service h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(95, 95, 95);
+  text-align: center;
+}
+
+.services-container .service img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.services-container .service button {
+  width: 100%;
 }
