@@ -10,6 +10,41 @@
 :root {
   --image-bg-color: #cccccc;
   --primary-color: #427bc0;
+  --letter-spacing: 1px;
+  --transition: 0.2s;
+}
+
+.secondary-button {
+  background-color: #fff;
+  padding: 8px 22px;
+  width: fit-content;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.secondary-button:hover {
+  background-color: #427bc0;
+  color: #fff;
+}
+
+.primary-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 8px 22px;
+  width: fit-content;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.primary-button:hover {
+  background-color: #fff;
+  color: var(--primary-color);
 }
 
 body {
@@ -30,6 +65,7 @@ header {
 }
 
 .three-image-container .four-july {
+  position: relative;
   grid-column: 1 / 2;
   grid-row: 1 / 3;
 }
@@ -38,4 +74,110 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.four-july-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  text-align: end;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  bottom: 0;
+  right: 0;
+}
+
+.four-july-info p:first-child {
+  font-size: 20px;
+  max-width: 200px;
+  letter-spacing: var(--letter-spacing);
+  align-self: end;
+}
+
+.four-july-info .orders-parag {
+  font-size: 18px;
+  letter-spacing: var(--letter-spacing);
+}
+
+.four-july-info h3 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: var(--letter-spacing);
+}
+
+.four-july-info h2 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: var(--letter-spacing);
+}
+
+.four-july-info .validation-date {
+  font-size: 9px;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: var(--letter-spacing);
+}
+
+.four-july-info button {
+  align-self: end;
+  color: var(--primary-color);
+}
+
+.wireless-efficiency {
+  position: relative;
+}
+
+.wireless-efficiency-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  width: 120px;
+  text-align: center;
+  color: #fff;
+  bottom: 0;
+  right: 0;
+  padding: 10px 0px;
+  font-size: 14px;
+}
+
+.wireless-efficiency-info button {
+  color: #c1352c;
+  margin-top: 20px;
+}
+
+.wireless-efficiency-info button:hover {
+  background-color: #c1352c;
+  color: #fff;
+}
+
+.protective-equipment {
+  position: relative;
+}
+
+.protective-equipment-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+}
+
+.protective-equipment-info h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #203e6b;
+  margin-bottom: 25px;
+  background-color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  width: 260px;
+  border-radius: 50px;
+  border: 6px solid #afdaf6;
 }
