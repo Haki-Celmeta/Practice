@@ -52,7 +52,10 @@ body {
   justify-content: center;
   align-items: center;
   padding: 50px 0px;
+  overflow-x: hidden;
 }
+
+/* -- HEADER -- */
 
 .three-image-container {
   display: grid;
@@ -196,7 +199,21 @@ body {
   gap: 10px;
 }
 
+.services-container .service-mobile {
+  display: none;
+  text-transform: uppercase;
+  max-width: 115px;
+  gap: 10px;
+}
+
 .services-container .service h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(95, 95, 95);
+  text-align: center;
+}
+
+.services-container .service-mobile h4 {
   font-size: 16px;
   font-weight: 700;
   color: rgb(95, 95, 95);
@@ -208,6 +225,128 @@ body {
   object-fit: cover;
 }
 
+.services-container .service-mobile img {
+  width: 100%;
+  object-fit: cover;
+}
+
 .services-container .service button {
   width: 100%;
+}
+
+.services-container .service-mobile button {
+  width: 100%;
+}
+
+/* -- HEADER MEDIA QUERIES -- */
+
+@media (max-width: 960px) {
+  .three-image-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .three-image-container .four-july,
+  .three-image-container .wireless-efficiency,
+  .three-image-container .protective-equipment {
+    width: 100%;
+  }
+
+  .three-image-container .img-container img {
+    width: 600px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .three-image-container .four-july {
+    grid-row: 1 / 2;
+  }
+
+  .three-image-container .four-july-info {
+    padding: 20px;
+  }
+
+  .three-image-container .four-july-info p, .four-july-info h3, .four-july-info h2 {
+    display: none;
+  }
+
+  .three-image-container .four-july-info .secondary-button {
+    display: block;
+  }
+
+  .three-image-container .wireless-efficiency-info {
+    margin: 10px 20px;
+  }
+
+  .three-image-container .wireless-efficiency-info img{
+    width: 20px;
+    height: 30px;
+  }
+
+  .protective-equipment-info {
+    width: 600px;
+  }
+
+  .services-container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .three-image-container .img-container {
+    width: 100%;
+  }
+
+  .three-image-container .img-container img:not(#high-voltage-img){
+    width: 100vw;
+  }
+
+  .protective-equipment-info {
+    width: 100%;
+  }
+
+  .services-container {
+    flex-direction: column;
+  }
+
+  .service img {
+    max-height: 100px;
+  }
+
+  .services-container .service {
+    display: none;
+  }
+
+  .services-container .service-mobile {
+    display: flex;
+    max-width: 100%;
+    padding: 10px 0px;
+    margin: 0px 30px;
+  }
+
+  .services-container .service-mobile:not(.service-mobile:last-child) {
+    border-bottom: 1px solid rgb(236, 236, 236);
+  }
+
+  .services-container .service-mobile img {
+    width: 80px;
+    height: 100px;
+    border-radius: 4px;
+  }
+
+  .service-mobile button {
+    width: fit-content;
+    margin-top: 3px;
+    color: var(--primary-color);
+    background-color: transparent;
+    padding-left: 0px;
+    text-align: left;
+    font-weight: 700;
+  }
+
+  .service-mobile div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+  }
 }
